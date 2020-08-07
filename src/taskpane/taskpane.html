@@ -1,0 +1,135 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Office UI Fabric, visit https://developer.microsoft.com/fabric. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="fabric.css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <section id="sideload-msg" class="ms-welcome__main">
+    </section>
+
+    <div id="root" style="margin-top:20px;">
+    </div>
+
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <div>
+            <span class="ms-Button-label">Display :</span>
+            <input id="PointItems" type="text" value="10" size="5"/>
+            <span class="ms-Button-label" style="margin-right:20px;">items</span>
+
+            <span class="ms-Button-label">from</span>
+            <select id="orientation">
+                <option value="1">Top</option>
+                <option value="2">Bottom</option>
+            </select>
+        </div>
+
+        <!-- <div>
+ 
+            <div >
+                <div role="button" id="createLineChart" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px; margin-right:24px;">createLineChart</span>
+                </div>
+
+                <div role="button" id="playLineChart" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px">playLineChart</span>
+                </div>
+            </div>
+        </div> -->
+
+        <div>
+            <!-- <div id="root2">
+            </div> -->
+
+            <div>
+                <div role="button" id="createBarChart" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px; margin-right:24px;">createBarChart</span>
+                </div>
+
+                <div role="button" id="playBarChart" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px">playBarChart</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <!-- <div id="root3">
+            </div> -->
+
+            <div>
+                <div role="button" id="createColumnChart" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px; margin-right:24px;">createColumnChart</span>
+                </div>
+
+                <div role="button" id="playColumnChart" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px">playColumnChart</span>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <!-- <div>
+            <div>
+                <div role="button" id="lineCopyChart" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px; margin-right:24px;">lineCopyChart</span>
+                </div>
+
+                <div role="button" id="playCopyLine" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px">playCopyLine</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <div role="button" id="dynamicSpace4Line" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px; margin-right:24px;">dynamicSpace4Line</span>
+                </div>
+
+                <div role="button" id="playNewLine" class="content ms-Button ms-Button--hero ms-font-xl">
+                    <span class="ms-Button-label" style="font-size:14px">playNewLine</span>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div>
+            <div role="button" id="test1" class="content ms-Button ms-Button--hero ms-font-xl">
+                <span class="ms-Button-label" style="font-size:14px; margin-right:24px;">test1</span>
+            </div>
+
+            <div role="button" id="test2" class="content ms-Button ms-Button--hero ms-font-xl">
+                <span class="ms-Button-label" style="font-size:14px">test2</span>
+            </div>
+        </div>
+
+        <div>
+            <div role="button" id="test3" class="content ms-Button ms-Button--hero ms-font-xl">
+                <span class="ms-Button-label" style="font-size:14px; margin-right:24px;">test3</span>
+            </div>
+
+        </div> -->
+
+    </main>
+</body>
+
+</html>
